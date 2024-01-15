@@ -1,0 +1,11 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  /* height: auto; */
+}
+
+.banner img {
+  height: 100%;
+  width: auto;
+  aspect-ratio: auto;
+}
