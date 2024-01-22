@@ -1,11 +1,125 @@
-.banner {
-  display: flex;
-  justify-content: center;
-  /* height: auto; */
+.detaliiFilm {
+  background-size:cover;
+  background-color: #111;
+  font-family:'Times New Roman', Times, serif;
 }
 
+.banner {
+  
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  padding-top: 30px;
+  padding-right: 250px;
+  padding-left: 100px;
+  border-radius: 8px;
+
+
+}
+.titlu {
+  font-weight: bold;
+  color: white;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 270px;
+  font-size: 100px;
+}
+
+
 .banner img {
+  border-radius: 50px;
   height: 100%;
   width: auto;
   aspect-ratio: auto;
+  /* padding-top: 10px; */
+  /* padding-right: 150px; */
+  padding-left: 10px;
+}
+
+.grup {
+  padding-left: 5px;
+}
+
+.descriere {
+  color: white;
+  display: flex;
+  align-items: center; 
+  font-size: 40px;
+  padding-left: 110px;
+  
+  
+   
+    
+    
+  
+}
+  
+
+.actori img { 
+  /* height: 100%; */
+  width: 100px;
+
+  align-content: space-between;
+
+}
+
+.actori {
+  padding-top: 40px;
+  /* display: flex; */
+  gap: 8px;
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;  
+  
+
+  
+}
+
+.numeActori {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+
+}
+
+.departamentActori {
+  text-align: center;
+  color:white;
+  font-size: 20px;
+}
+
+.titluActori {
+  /* align-items: center; */
+  color:white;
+  padding-left: 50%;
+  font-size: 50px;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  
+}
+
+.shape-outer {
+  display: flex;
+  flex-shrink: 0;
+  height: calc(150px + 2vw);
+  width: calc(150px + 2vw);
+  margin: 25px;
+  background-image: linear-gradient(to bottom right, #111, #111, #111);
+}
+
+.shape-inner {	
+  height: auto;
+  width: auto;
+  background-size: cover;
+  margin: auto;
+  object-fit: fill;
+}
+.circle {
+  -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
 }

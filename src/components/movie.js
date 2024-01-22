@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import axios from "axios";
+import axios from '../axios';
 import './movie.css'
 const Movie = () => {
   const [movies, setMovies] = useState([])
@@ -8,7 +8,7 @@ const Movie = () => {
 
   const { id } = useParams()
   useEffect(() => {
-    // fetch('https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US', options)
+    fetch('https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US');
 
     async function fetchData() {
       const options = {
@@ -54,8 +54,57 @@ const Movie = () => {
   }, [id]);
 
   return (
-    <div className='banner'><img src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`} alt="" /></div>
+    <div className='detaliiFilm'>
+        <div className='titlu'>{movies.original_title}</div>
+        <div className='banner'><img src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`} alt="" />
+        
+        <div className='descriere'>{movies.overview}</div>
+        </div>
+        <div>
+
+
+        <div className='titluActori'>CAST</div>
+        <div className='actori'>
+        
+        {actors.cast?.map(actori => {
+
+console.log(actori)
+return (
+      
+    <div className='grup'> 
+        <div className='numeActori'>{actori.name}</div>
+        <div className='departamentActori'>{actori.known_for_department}</div>
+        <div class="shape-outer circle">
+	
+  <img class="shape-inner circle" src={`https://image.tmdb.org/t/p/w1280${actori.profile_path}`} alt="" />
+  
+</div>   
+    
+    
+
+</div>    
+
+)
+})}
+</div>
+        
+        </div>
+      
+
+        
+    
+    
+   </div>
+
+    
+    
   )
 }
+
+
+
+    
+  
+
 
 export default Movie
